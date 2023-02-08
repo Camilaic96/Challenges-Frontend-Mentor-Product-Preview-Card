@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --color-prim-darkCyan: hsl(158, 36%, 37%);
+    --color-prim-cream: hsl(30, 38%, 92%);
+
+    --color-neutral-veryDarkBlue: hsl(212, 21%, 14%);
+    --color-neutral-darkGrayishBlue: hsl(228, 12%, 48%);
+    --color-neutral-white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 100vh;
+    background-color: var(--color-prim-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border: 0;
+    width: 20rem;
+    height: 38rem;
+}
+
+.card-img-top {
+    height: 235px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+p {
+    color: var(--color-neutral-darkGrayishBlue);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#subtitle {
+    letter-spacing: 5px;
+}
+
+#title {
+    font-size: 32px;
+    font-family: 'Fraunces', serif;
+    color: var(--color-neutral-veryDarkBlue);
+}
+
+#price{
+    font-size: 32px;
+    font-family: 'Fraunces', serif;
+    color: var(--color-prim-darkCyan);
+}
+
+#lastPrice {
+    text-decoration: line-through;
+    position: relative;
+    top: -5px;
+    margin-left: 10px;
+}
+
+#btn-add-cart {
+    background-color: var(--color-prim-darkCyan);
+    border: 1px solid var(--color-prim-darkCyan);
+    width: 100%;
+    padding: 10px;
+}
+
+#btn-add-cart:hover {
+    background-color: var(--color-neutral-veryDarkBlue);
+}
+
+@media only screen and (min-width: 767px) {
+    .card {
+        flex-direction: row;
+        width: 40rem;
+        height: 32rem;
+    }
+
+    .card-img-top {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+}
